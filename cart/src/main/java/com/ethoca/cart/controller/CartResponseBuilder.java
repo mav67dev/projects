@@ -28,4 +28,11 @@ public class CartResponseBuilder {
             initialCart.put(orderProduct.getProductName(), cartProduct);
         }
     }
+
+    public static OrderProduct parse(CartProduct cartProduct){
+        OrderProduct orderProduct = new OrderProduct();
+        orderProduct.setProductName(cartProduct.getProductName());
+        orderProduct.setQuantity(cartProduct.getQuantity());
+        return orderProduct;
+    }
 }

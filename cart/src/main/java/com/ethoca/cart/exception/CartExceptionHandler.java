@@ -28,7 +28,7 @@ public class CartExceptionHandler extends ResponseEntityExceptionHandler {
     public final ResponseEntity<Object> handleAvailabilityException(AvailabilityException ex) {
         List<String> details = new ArrayList<>();
         details.add(ex.getMessage());
-        ErrorResponse error = new ErrorResponse("Record Not Found", details);
+        ErrorResponse error = new ErrorResponse("Shortage of products", details);
         return new ResponseEntity(error, HttpStatus.BAD_REQUEST);
     }
 

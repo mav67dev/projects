@@ -31,7 +31,8 @@ CREATE TABLE IF NOT EXISTS PRODUCT (
   product_name VARCHAR(250) NOT NULL,
   price DECIMAL NOT NULL,
   quantity INT NOT NULL,
-  description VARCHAR(250) NOT NULL,
+  description VARCHAR(500) NOT NULL,
+  image VARCHAR(250) NOT NULL,
   CONSTRAINT PRODUCT_PK PRIMARY KEY (product_name)
 );
 

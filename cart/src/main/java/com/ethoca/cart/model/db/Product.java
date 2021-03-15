@@ -26,15 +26,20 @@ public class Product implements Serializable{
     @Column(name = "description")
     private String description;
 
-    public Product(String productName, BigDecimal price, int quantity, String description) {
+    @Column(name = "image")
+    private String image;
+
+
+    public Product(){
+
+    }
+
+    public Product(String productName, BigDecimal price, int quantity, String description, String image) {
         this.productName = productName;
         this.price = price;
         this.quantity = quantity;
         this.description = description;
-    }
-
-    public Product(){
-
+        this.image = image;
     }
 
     public int getProductId() {
@@ -73,6 +78,10 @@ public class Product implements Serializable{
         this.description = description;
     }
 
+    public String getImage() { return image; }
+
+    public void setImage(String image) { this.image = image; }
+
 
     @Override
     public String toString() {
@@ -82,7 +91,7 @@ public class Product implements Serializable{
                 ", price=" + price +
                 ", quantity=" + quantity +
                 ", description='" + description + '\'' +
+                ", image='" + image + '\'' +
                 '}';
     }
-
 }
